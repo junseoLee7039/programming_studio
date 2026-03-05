@@ -8,9 +8,7 @@ void printReport(char mn[10][20], int mr[10], int mc, char wn[10][20], int wr[10
 
 int main() {
     char man_name[10][20], woman_name[10][20];
-
     int man_room[10], woman_room[10], man_cnt = 0, woman_cnt = 0;
-
     int man_str[5] = {0,0,0,0,0}, woman_str[5]={0,0,0,0,0}, opt = -1;
     srand((unsigned)time(NULL));
 
@@ -52,7 +50,6 @@ int main() {
 
             int r = findRoom(woman_str);
             woman_str[r] = woman_str[r] + 1;
-
             woman_room[woman_cnt] = 201 + r;
 
             printf("%s 학생 %d호실 배정되었습니다.\n", woman_name[woman_cnt], woman_room[woman_cnt]);
@@ -61,7 +58,6 @@ int main() {
             printf("메뉴를 다시 선택하세요.\n");
         }
     }
-
     printReport(man_name, man_room, man_cnt, woman_name, woman_room, woman_cnt);
 
 }
